@@ -1,0 +1,472 @@
+<!-- =========================
+SITE PACK: Wiechmann Data Consulting (Dark Blue Theme)
+Files in this document:
+1) /index.html
+2) /excel-optimierung/index.html
+3) /prozess-optimierung/index.html
+4) /hr-kpi-system/index.html
+Copy each block into the corresponding file path in your repo.
+========================= -->
+
+<!-- ========== FILE: /index.html ========== -->
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wiechmann Data Consulting – Excel Beratung & Automatisierung</title>
+  <meta name="description" content="Excel‑Beratung, Power Query, Power Automate und Prozessoptimierung – pragmatisch, modern, wartungsarm." />
+  <meta property="og:title" content="Wiechmann Data Consulting" />
+  <meta property="og:description" content="Excel‑Beratung & Automatisierung für KMU." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; /* deep navy */
+      --surface:#0f172a; /* card */
+      --muted:#94a3b8; /* slate-400 */
+      --text:#e5e7eb; /* slate-200 */
+      --border:rgba(148,163,184,.2);
+      --accent:#60a5fa; /* blue-400 */
+      --accent-2:#a78bfa; /* violet-400 */
+      --accent-3:#22d3ee; /* cyan-400 */
+      --accent-4:#34d399; /* emerald-400 */
+      --radius:18px;--shadow:0 10px 30px rgba(2,6,23,.5);--maxw:1180px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 10% -10%, rgba(96,165,250,.15), transparent 60%), radial-gradient(1000px 700px at 90% 0%, rgba(167,139,250,.12), transparent 55%), var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.6);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 120deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent-4),var(--accent));display:grid;place-items:center;color:#0b1220;box-shadow:var(--shadow);font-weight:900}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1220;border:none;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(1.05)}
+    .ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);font-size:12px;color:#cbd5e1;background:rgba(148,163,184,.08)}
+    h1{font-size:clamp(34px,5.2vw,64px);line-height:1.04;margin:16px 0 12px}
+    .lead{color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+    .window{position:relative;border:1px solid var(--border);border-radius:16px;background:#0c1220;color:#c7d2fe;box-shadow:var(--shadow)}
+    .window-header{display:flex;gap:8px;padding:10px;border-bottom:1px solid rgba(255,255,255,.06)}.dot{width:10px;height:10px;border-radius:999px;background:#ef4444}.dot:nth-child(2){background:#f59e0b}.dot:nth-child(3){background:#22c55e}
+    section{padding:72px 0;border-top:1px solid var(--border)}
+    h2{font-size:clamp(26px,3.8vw,40px);margin:0 0 10px}.sub{color:var(--muted);margin:0 0 24px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent-3),var(--accent-4));display:grid;place-items:center;color:#0b1220;font-weight:900;margin-bottom:10px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step .num{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1220;display:grid;place-items:center;font-weight:900;margin-bottom:8px}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:#e5e7eb}textarea{min-height:130px}
+    footer{border-top:1px solid var(--border);padding:32px 0;color:#cbd5e1}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:22px}.foot-small{font-size:13px}
+    @media(max-width:1040px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo" aria-hidden="true">W</div>Wiechmann Data Consulting</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn ghost" href="/excel-optimierung/">Excel‑Optimierung</a>
+        <a class="btn ghost" href="/hr-kpi-system/">HR‑KPI‑System</a>
+        <a class="btn ghost" href="/prozess-optimierung/">Prozess‑Optimierung</a>
+        <a class="btn" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container hero">
+    <div>
+      <span class="eyebrow">Excel‑Beratung · Power Query · Power Automate</span>
+      <h1>Excel‑Beratung & Automatisierung, die sofort Wirkung zeigt.</h1>
+      <p class="lead">Ich helfe kleinen Unternehmen, Excel sauber und schnell zu machen – mit robusten Vorlagen, Power‑Query‑Pipelines und schlanken Power‑Automate‑Flows.</p>
+      <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap">
+        <a class="btn" href="/excel-optimierung/">Excel‑Beratung ansehen</a>
+        <a class="btn ghost" href="/hr-kpi-system/">HR‑KPI‑System</a>
+      </div>
+    </div>
+    <div>
+      <div class="window">
+        <div class="window-header"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+<pre style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;white-space:pre;overflow:auto;padding:16px">// Beispiel: Monatsreport automatisch erstellen
+let Quelle = SharePoint.Contents("/HR/Reports"),
+    Bereinigt = Transform(Quelle, Regeln),
+    Export = Schreiben("Report.xlsx")
+run(Export)
+</pre>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>Leistungen</h2>
+      <p class="sub">Fokus auf Excel‑Beratung & Automatisierung – messbar, wartungsarm.</p>
+      <div class="features">
+        <div class="card" style="padding:20px"><div class="icon">📊</div><b><a href="/excel-optimierung/" style="color:#e5e7eb">Excel‑Optimierung & Power Query</a></b><p class="sub">Saubere Datenmodelle, stabile Abfragen, valide Templates.</p></div>
+        <div class="card" style="padding:20px"><div class="icon">👥</div><b><a href="/hr-kpi-system/" style="color:#e5e7eb">HR‑KPI‑System & Reporting</a></b><p class="sub">Fluktuation, Time‑to‑Hire, Abwesenheiten – automatisiert und transparent.</p></div>
+        <div class="card" style="padding:20px"><div class="icon">🧭</div><b><a href="/prozess-optimierung/" style="color:#e5e7eb">Prozess‑Optimierung</a></b><p class="sub">Abläufe entwirren, Medienbrüche schließen, KPIs etablieren.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>So läuft's</h2>
+      <div class="steps">
+        <div class="card step" style="padding:20px"><div class="num">1</div><b>Kickoff</b><p class="sub">Ziele, Ist‑Prozess, Quick‑Wins.</p></div>
+        <div class="card step" style="padding:20px"><div class="num">2</div><b>Konzept & Angebot</b><p class="sub">Transparente Schritte & Fixpreise.</p></div>
+        <div class="card step" style="padding:20px"><div class="num">3</div><b>Umsetzung</b><p class="sub">Iterativ, getestet, dokumentiert.</p></div>
+        <div class="card step" style="padding:20px"><div class="num">4</div><b>Übergabe & Support</b><p class="sub">Schulung, Handbuch, auf Wunsch Betreuung.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container contact">
+      <form class="card" style="padding:20px" action="https://formspree.io/f/DEIN_FORM_ID" method="POST">
+        <input type="hidden" name="form_name" value="WDC – Start Kontakt" />
+        <label><span>Ihr Name</span><input name="name" type="text" placeholder="Max Mustermann" required /></label>
+        <label><span>E‑Mail</span><input name="email" type="email" placeholder="max@firma.de" required /></label>
+        <label><span>Worum geht es?</span><textarea name="message" placeholder="Kurz Ihr Anliegen beschreiben…" required></textarea></label>
+        <button class="btn" type="submit">Nachricht senden</button>
+        <span class="sub">Hinweis: Das Formular wird über Formspree (Free‑Tier) gesendet.</span>
+      </form>
+      <div>
+        <h2>Wiechmann Data Consulting</h2>
+        <p class="sub">Excel · Automatisierung · Prozesse – aus München, remote in D‑A‑CH</p>
+        <div style="display:grid;gap:10px;margin-top:14px">
+          <div>📧 kontakt@wiechmann-data.de</div>
+          <div>📍 München · Remote</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:8px"><div class="logo" aria-hidden="true"></div>Wiechmann Data Consulting</div>
+        <p class="foot-small">© <span id="y"></span> – Alle Rechte vorbehalten.</p>
+      </div>
+      <div>
+        <b>Leistungen</b>
+        <ul class="foot-small">
+          <li><a href="/excel-optimierung/">Excel‑Optimierung</a></li>
+          <li><a href="/hr-kpi-system/">HR‑KPI‑System</a></li>
+          <li><a href="/prozess-optimierung/">Prozess‑Optimierung</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Rechtliches</b>
+        <ul class="foot-small">
+          <li><a href="#" onclick="openModal('impressum')">Impressum</a></li>
+          <li><a href="#" onclick="openModal('datenschutz')">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Kontakt</b>
+        <ul class="foot-small">
+          <li><a href="mailto:kontakt@wiechmann-data.de">E-Mail senden</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="impressum" class="card" style="max-width:720px;padding:24px;border:1px solid var(--border);border-radius:16px">
+    <h3 style="margin:0 0 8px">Impressum</h3>
+    <p class="sub">Angaben folgen nach Einrichtung einer Geschäftsadresse.</p>
+    <p><b>Verantwortlich:</b> Hans Jakob Wiechmann</p>
+    <p>E‑Mail: kontakt@wiechmann-data.de</p>
+    <form method="dialog"><button class="btn" style="margin-top:8px">Schließen</button></form>
+  </dialog>
+  <dialog id="datenschutz" class="card" style="max-width:720px;padding:24px;border:1px solid var(--border);border-radius:16px">
+    <h3 style="margin:0 0 8px">Datenschutzhinweis</h3>
+    <p>Diese Website setzt keine Cookies oder Tracker ein. Eingaben im Kontaktformular werden über Formspree verarbeitet.</p>
+    <ul class="sub">
+      <li>Verantwortlicher: Wiechmann Data Consulting</li>
+      <li>Zweck: Bearbeitung Ihrer Anfrage</li>
+      <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</li>
+      <li>Speicherdauer: bis Abschluss der Anfragebearbeitung</li>
+      <li>Ihre Rechte: Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch</li>
+    </ul>
+    <form method="dialog"><button class="btn" style="margin-top:8px">Schließen</button></form>
+  </dialog>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();function openModal(id){document.getElementById(id).showModal();}</script>
+</body>
+</html>
+
+
+<!-- ========== FILE: /excel-optimierung/index.html ========== -->
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel‑Optimierung – Wiechmann Data Consulting</title>
+  <meta name="description" content="Excel schneller, robuster und wartungsarm: Power Query, saubere Datenmodelle, Templates, Validierungen, Automatisierungen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--surface:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:rgba(148,163,184,.2);--accent:#60a5fa;--accent-2:#a78bfa;--accent-3:#22d3ee;--accent-4:#34d399;--radius:18px;--shadow:0 10px 30px rgba(2,6,23,.5);--maxw:1180px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at 85% -10%, rgba(96,165,250,.12), transparent 60%), var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    a{color:var(--accent)}a:hover{text-decoration:underline}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.6);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 120deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent-4),var(--accent));display:grid;place-items:center;color:#0b1220;box-shadow:var(--shadow);font-weight:900}
+    h1{font-size:clamp(30px,4.8vw,52px);margin:22px 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:#cbd5e1;font-size:12px}
+    footer{border-top:1px solid var(--border);padding:32px 0;color:#cbd5e1}
+    @media(max-width:1040px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo" aria-hidden="true"></div>Wiechmann Data Consulting</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="badge" href="/">Startseite</a>
+        <a class="badge" href="/hr-kpi-system/">HR‑KPI‑System</a>
+        <a class="badge" href="/prozess-optimierung/">Prozess‑Optimierung</a>
+        <a class="badge" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Excel‑Optimierung & Beratung</h1>
+    <p class="lead">Robuste Workbooks statt Flickwerk: Power Query‑Pipelines, saubere Vorlagen, valide Eingaben, klare Benennungen – damit dein Team schneller und sicherer arbeitet.</p>
+  </div>
+
+  <section>
+    <div class="container grid">
+      <div class="card"><b>Power Query & Datenmodelle</b><p class="lead" style="font-size:15px">Stabile Abfragen, klare Transformationsschritte, automatische Aktualisierung statt Copy‑Paste.</p></div>
+      <div class="card"><b>Templates & Validierung</b><p class="lead" style="font-size:15px">Namenskonventionen, Prüfung von Eingaben, Schutz – weniger Fehler, mehr Tempo.</p></div>
+      <div class="card"><b>Performance & Aufräumen</b><p class="lead" style="font-size:15px">Dateigröße reduzieren, Formeln entschlacken, Pivot/PowerPivot neu strukturieren.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Typische Ergebnisse</h2>
+      <ul>
+        <li>−60% manuelle Klicks durch Power Query & Automatisierung</li>
+        <li>+30–70% schnellere Datei‑Öffnung & Berechnung</li>
+        <li>Weniger Fehler dank Validierungen & klaren Prozessen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="lead">Beschreibe kurz dein Ziel – ich melde mich mit Quick‑Wins und einem klaren Vorgehen.</p>
+      <form action="https://formspree.io/f/DEIN_FORM_ID" method="POST" class="card">
+        <input type="hidden" name="form_name" value="WDC – Excel Optimierung" />
+        <p><label>Name<br><input name="name" required></label></p>
+        <p><label>E‑Mail<br><input type="email" name="email" required></label></p>
+        <p><label>Nachricht<br><textarea name="message" required></textarea></label></p>
+        <p><button class="badge" style="border-color:var(--accent);color:var(--accent)">Senden</button></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container">© <script>document.write(new Date().getFullYear())</script> Wiechmann Data Consulting</footer>
+</body>
+</html>
+
+
+<!-- ========== FILE: /prozess-optimierung/index.html ========== -->
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prozess‑Optimierung – Wiechmann Data Consulting</title>
+  <meta name="description" content="Abläufe schlank machen: Medienbrüche schließen, Verantwortlichkeiten klären, Automatisierung mit Power Automate – messbare KPIs statt Bauchgefühl." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--surface:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:rgba(148,163,184,.2);--accent:#60a5fa;--accent-2:#a78bfa;--accent-3:#22d3ee;--accent-4:#34d399;--radius:18px;--shadow:0 10px 30px rgba(2,6,23,.5);--maxw:1180px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at 15% -10%, rgba(167,139,250,.12), transparent 60%), var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    a{color:var(--accent)}a:hover{text-decoration:underline}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.6);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 120deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent-4),var(--accent));display:grid;place-items:center;color:#0b1220;box-shadow:var(--shadow);font-weight:900}
+    h1{font-size:clamp(30px,4.8vw,52px);margin:22px 0 10px}.lead{color:var(--muted);font-size:18px}
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:#cbd5e1;font-size:12px}
+    footer{border-top:1px solid var(--border);padding:32px 0;color:#cbd5e1}
+    @media(max-width:1040px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo" aria-hidden="true"></div>Wiechmann Data Consulting</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="badge" href="/">Startseite</a>
+        <a class="badge" href="/excel-optimierung/">Excel‑Optimierung</a>
+        <a class="badge" href="/hr-kpi-system/">HR‑KPI‑System</a>
+        <a class="badge" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Prozess‑Optimierung</h1>
+    <p class="lead">Abläufe stringent machen, Übergaben glätten, Aufgaben klar sichtbar machen – so senkst du Kosten und erhöhst Qualität.</p>
+  </div>
+
+  <section>
+    <div class="container grid">
+      <div class="card"><b>Ist‑Analyse & Mappings</b><p class="lead" style="font-size:15px">Workshops, Swimlanes, Bottlenecks – sichtbare Pain Points und klare Quick‑Wins.</p></div>
+      <div class="card"><b>Standardisierung</b><p class="lead" style="font-size:15px">Vorlagen, Benennungen, Checklisten, Verantwortlichkeiten – weniger Wildwuchs, mehr Tempo.</p></div>
+      <div class="card"><b>Automatisierung mit Power Automate</b><p class="lead" style="font-size:15px">Trigger, Bedingungen, Genehmigungen, Logs – wartungsarm und nachvollziehbar.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Ergebnisse messbar machen</h2>
+      <ul>
+        <li>KPIs: Durchlaufzeit, Wartezeit, Fehlerrate, Nacharbeit.</li>
+        <li>Dashboard (Excel/Power BI) für Status & Engpässe.</li>
+        <li>Change‑log & Dokumentation – damit das Wissen bleibt.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="lead">Beschreibe kurz deinen Prozess – ich melde mich mit Vorschlägen zur Optimierung.</p>
+      <form action="https://formspree.io/f/DEIN_FORM_ID" method="POST" class="card">
+        <input type="hidden" name="form_name" value="WDC – Prozess Optimierung" />
+        <p><label>Name<br><input name="name" required></label></p>
+        <p><label>E‑Mail<br><input type="email" name="email" required></label></p>
+        <p><label>Nachricht<br><textarea name="message" required></textarea></label></p>
+        <p><button class="badge" style="border-color:var(--accent);color:var(--accent)">Senden</button></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container">© <script>document.write(new Date().getFullYear())</script> Wiechmann Data Consulting</footer>
+</body>
+</html>
+
+
+<!-- ========== FILE: /hr-kpi-system/index.html ========== -->
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HR‑KPI‑System & Reporting – Wiechmann Data Consulting</title>
+  <meta name="description" content="HR‑Kennzahlensystem aufbauen: Datenquellen verbinden, Definitionen vereinheitlichen, Dashboards (Excel/Power BI), Automatisierung mit Power Query & Power Automate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--surface:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:rgba(148,163,184,.2);--accent:#60a5fa;--accent-2:#a78bfa;--accent-3:#22d3ee;--accent-4:#34d399;--radius:18px;--shadow:0 10px 30px rgba(2,6,23,.5);--maxw:1180px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at 70% -10%, rgba(34,211,238,.10), transparent 60%), var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    a{color:var(--accent)}a:hover{text-decoration:underline}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.6);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 120deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent-4),var(--accent));display:grid;place-items:center;color:#0b1220;box-shadow:var(--shadow);font-weight:900}
+    h1{font-size:clamp(30px,4.8vw,52px);margin:22px 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:#cbd5e1;font-size:12px}
+    footer{border-top:1px solid var(--border);padding:32px 0;color:#cbd5e1}
+    @media(max-width:1040px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo" aria-hidden="true"></div>Wiechmann Data Consulting</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="badge" href="/">Startseite</a>
+        <a class="badge" href="/excel-optimierung/">Excel‑Optimierung</a>
+        <a class="badge" href="/prozess-optimierung/">Prozess‑Optimierung</a>
+        <a class="badge" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>HR‑KPI‑System & Reporting</h1>
+    <p class="lead">HR‑Kennzahlen eindeutig definieren, Datenquellen verbinden und Dashboards automatisieren – damit Entscheidungen schnell und fundiert getroffen werden.</p>
+  </div>
+
+  <section>
+    <div class="container grid">
+      <div class="card"><b>KPI‑Definitionen & Datenmodell</b><p class="lead" style="font-size:15px">Gemeinsames Glossar (z. B. Fluktuation, Time‑to‑Hire, Abwesenheit), Datenquellen‑Mapping, sauberes Modell.</p></div>
+      <div class="card"><b>Automatisierte ETL mit Power Query</b><p class="lead" style="font-size:15px">Regelbasierte Bereinigung, Zusammenführung aus HR‑Systemen, SharePoint, CSV.</p></div>
+      <div class="card"><b>Dashboards (Excel/Power BI)</b><p class="lead" style="font-size:15px">Interaktive Übersichten, Drill‑downs, Filter – inklusive Doku & Ownership.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Beispiel‑KPIs</h2>
+      <ul>
+        <li>Fluktuation (gesamt/freiwillig), Time‑to‑Hire, Time‑to‑Fill</li>
+        <li>Headcount, FTE, Altersstruktur, Tenure</li>
+        <li>Abwesenheiten (Kurz/Lang), Krankenquote</li>
+        <li>Diversity‑Sicht, Recruiting‑Funnel</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Governance & Qualität</h2>
+      <ul>
+        <li>Versionierung, Datenstichtage, Änderungslog</li>
+        <li>Rollen & Rechte, Verantwortlichkeiten</li>
+        <li>Validierungen & Plausibilitätschecks</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="lead">Schreibe mir kurz deine HR‑Ziele – ich skizziere das Zielbild und die ersten Quick‑Wins.</p>
+      <form action="https://formspree.io/f/DEIN_FORM_ID" method="POST" class="card">
+        <input type="hidden" name="form_name" value="WDC – HR KPI System" />
+        <p><label>Name<br><input name="name" required></label></p>
+        <p><label>E‑Mail<br><input type="email" name="email" required></label></p>
+        <p><label>Nachricht<br><textarea name="message" required></textarea></label></p>
+        <p><button class="badge" style="border-color:var(--accent);color:var(--accent)">Senden</button></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container">© <script>document.write(new Date().getFullYear())</script> Wiechmann Data Consulting</footer>
+</body>
+</html>
