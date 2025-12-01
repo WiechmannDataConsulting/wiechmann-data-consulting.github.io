@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HR-KPI-System & Reporting – Wiechmann Data Consulting</title>
+  <meta name="description" content="HR-Kennzahlensystem aufbauen: Datenquellen verbinden, Definitionen vereinheitlichen, Dashboards (Excel/Power BI), Automatisierung mit Power Query & Power Automate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--surface:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:rgba(148,163,184,.2);--accent:#60a5fa;--accent-2:#a78bfa;--accent-3:#22d3ee;--accent-4:#34d399;--radius:18px;--shadow:0 10px 30px rgba(2,6,23,.5);--maxw:1180px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at 70% -10%, rgba(34,211,238,.10), transparent 60%), var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    a{color:var(--accent)}a:hover{text-decoration:underline}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.6);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 120deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent-4),var(--accent));display:grid;place-items:center;color:#0b1220;box-shadow:var(--shadow);font-weight:900}
+    h1{font-size:clamp(30px,4.8vw,52px);margin:22px 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:#cbd5e1;font-size:12px}
+    footer{border-top:1px solid var(--border);padding:32px 0;color:#cbd5e1}
+    @media(max-width:1040px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo"></div>Wiechmann Data Consulting</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="badge" href="/">Startseite</a>
+        <a class="badge" href="/excel-optimierung/">Excel-Optimierung</a>
+        <a class="badge" href="/prozess-optimierung/">Prozess-Optimierung</a>
+        <a class="badge" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>HR-KPI-System & Reporting</h1>
+    <p class="lead">HR-Kennzahlen eindeutig definieren, Datenquellen verbinden und Dashboards automatisieren – damit Entscheidungen schnell und fundiert getroffen werden.</p>
+  </div>
+
+  <section>
+    <div class="container grid">
+      <div class="card"><b>KPI-Definitionen & Datenmodell</b><p class="lead" style="font-size:15px">Glossar (z. B. Fluktuation, Time-to-Hire), Datenmapping, Standards.</p></div>
+      <div class="card"><b>Automatisierte ETL mit Power Query</b><p class="lead" style="font-size:15px">Regelbasierte Bereinigung, Zusammenführung aus HR-Systemen, CSV, SharePoint.</p></div>
+      <div class="card"><b>Dashboards (Excel/Power BI)</b><p class="lead" style="font-size:15px">Interaktive Berichte, Drilldowns, Filter, Trends – inklusive Doku.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Beispiel-KPIs</h2>
+      <ul>
+        <li>Fluktuation (gesamt/freiwillig)</li>
+        <li>Time-to-Hire / Time-to-Fill</li>
+        <li>Headcount, FTE, Altersstruktur</li>
+        <li>Abwesenheiten, Krankenquote</li>
+        <li>Diversity & Recruiting Funnel</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Governance & Qualität</h2>
+      <ul>
+        <li>Versionierung, Stichtage, Änderungslog</li>
+        <li>Rollen & Verantwortlichkeiten</li>
+        <li>Validierungen & Plausibilitätschecks</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="lead">Schreibe mir kurz deine HR-Ziele – ich melde mich mit Quick-Wins und einem klaren Vorgehen.</p>
+      <form action="https://formspree.io/f/DEIN_FORM_ID" method="POST" class="card">
+        <p><label>Name<br><input name="name" required></label></p>
+        <p><label>E-Mail<br><input type="email" name="email" required></label></p>
+        <p><label>Nachricht<br><textarea name="message" required></textarea></label></p>
+        <p><button class="badge" style="border-color:var(--accent);color:var(--accent)">Senden</button></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container">© <script>document.write(new Date().getFullYear())</script> Wiechmann Data Consulting</footer>
+</body>
+</html>
